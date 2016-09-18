@@ -5,10 +5,17 @@ body{
     padding: 0;
     font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
-    background: url('../images/portfoliov2bg.png') no-repeat fixed top;
     z-index: -100;
+    min-height: 900px;
+    background: url('../images/portfoliov2bg.png') no-repeat fixed top;
+    background-size:cover;
 }
+.trueBg{
 
+    z-index: -100;
+    width:100%;
+    height:100%;
+}
 header{
     margin: 0 auto;
 }
@@ -35,6 +42,10 @@ nav{
     height:100%;
     float:left;
     display:block;
+    min-height: 800px;
+    position: fixed;
+    top:0;
+    left:0;
 }
 nav h1{
     background-color: rgba(255,255,255,0.10);
@@ -88,7 +99,29 @@ nav ul.subMenu li.skills{
 .bar:nth-of-type(2){
     border-right: 3px solid #ff00f6;
 }
+.subMenu a{
+    -webkit-transition: 0.25s;
+}
+.subMenu a{
+    color:#FFFFFF;
+}
+nav ul.subMenu.portfolioSub li a:hover{
+    color:#ff00f6;
+}
+nav ul.subMenu.aboutSub li a:hover{
+    color:#bbff52;
+}
 
+nav ul.subMenu li a span{
+    position: relative;
+    opacity: 0;
+    left:50px;
+    -webkit-transition: 0.25s;
+}
+nav ul.subMenu li a:hover span{
+    opacity: 1;
+    left:0;
+}
 
 section.top{
     font-family: 'Lato', Calibri, Arial, sans-serif;
